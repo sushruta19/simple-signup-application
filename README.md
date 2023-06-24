@@ -1,4 +1,4 @@
-# Signup-Application
+# Simple Signup Application
 This is a simple Node.js Web Application that demonstrates how to send POST **requests** to store user data on Mailchimp servers and process the **response** we get from the Mailchimp server.
 
 ## Features
@@ -18,11 +18,11 @@ The application follows a directory structure that organizes the files as follow
 - First make sure that you have node and git installed in your system.
 - Clone the repository to your local machine
 ```bash
-git clone https://github.com/sushruta19/simple-signup-application.git
+git clone https://github.com/sushruta19/newsletter-signup.git
 ```
-- Navigate to the `simple-signup-application` directory
+- Navigate to the `newsletter-signup` directory
 ```bash
-cd simple-signup-application
+cd newsletter-signup
 ```
 - Install the required dependencies by running the following command:
 ```bash
@@ -45,7 +45,33 @@ npm start
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or improvements for the Signup-Application, please do the following steps : 
+- **Fork** the repository. <br>![Imgur](https://i.imgur.com/an7hXVR.png)
+- **Clone** the repository: Clone the forked repository to your local machine using the following command:
+```bash
+git clone <forked-repo-url>
+```
+This will create a local copy of the project that you can work on.
+- **Create a new branch**: Before making any changes, create a new branch to work on your changes. Naming the branch based on the feature or bug fix you're working on is a good practice. For example:
+```bash
+git checkout -b improvement/ui-refactoring  #for improvements
+git checkout -b bugfix/login-issue          #for bugfix
+git checkout -b feature/user-registration   #for new features
+git checkout -b hotfix/security-vulnerable  #for hotfix
+```
+Here the slash(/) doesn't denote any address but its a part of the new branch name "bugfix/anything", etc.
+- **Make your changes**: Make the necessary changes or additions to the project
+- Stage, commit and push your changes to **your** remote forked repo at the new branch(not the master branch of your remote forked repo)
+```bash
+git add .
+git commit -m "Add a concise commit message describing the changes"
+git push origin <new-branch-you-worked-on>
+```
+- **Create a pull request**: Then, from your forked repository's page on GitHub, click on the "New pull request" button to create a pull request (PR) to the original repository. Provide a clear description of the changes you've made and why they are valuable. It's also helpful to reference any relevant issues or feature requests.
+- The project maintainers or other contributors may provide feedback or request changes on your pull request. Be responsive and address the feedback accordingly. This may involve making additional commits to your branch based on the feedback.
+- Once your pull request is approved, the project maintainers will merge your changes into the main branch. At this point, your contributions are part of the project.
 
+Please make sure to follow these guidelines to ensure a smooth and collaborative contribution process. If you have any questions or need further assistance, feel free to reach out to us.
 
+Thank you for your contribution!
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License]("./LICENSE")
