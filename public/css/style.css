@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2%;
+}
+
+form {
+  width: 20%;
+  margin:auto;
+  padding: 10px;
+  /* background-color: red; */
+}
+
+input, button {
+  display:block;
+  margin: 20px auto;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+button {
+  padding: 20px;
+  width: 93%;
+
+}
+button:hover {
+  border-color: white;
+  cursor: pointer;
+}
