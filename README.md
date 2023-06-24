@@ -74,4 +74,4 @@ Please make sure to follow these guidelines to ensure a smooth and collaborative
 
 Thank you for your contribution!
 ## License
-This project is licensed under the [MIT License]("./LICENSE")
+This project is licensed under the [MIT License](LICENSE)
