@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<% if(messageText === "Signup Page") { %>
+    <h1><%= messageText %></h1>
+    <form action="/" method="post">
+      <input type="text" name="fName" placeholder="First Name">
+      <input type="text" name="lName" placeholder="Last Name">
+      <input type="email" name="email" placeholder="Valid Email">
+      <button type="submit">Signup</button>
+    </form>
+  <% } else if(messageText[0] === "A") { %>
+    <h1><%= messageText %></h1>
+  <% } else { %>
+    <h1><%= messageText %></h1>
+    <form action="/failure" method="get">
+      Go back to Signup!<button type="submit">Try Again</button>
+    </form>
+  <% } %> 
+  
+</body>
+</html>

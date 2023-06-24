@@ -1,5 +1,5 @@
 // Replace these values with your own API key, List ID, and DC.
-const MAILCHIMP_API_KEY = "7a11f318b2f22e09fd3a414df8560b2c-us21";
+const MAILCHIMP_API_KEY = "ced97c94757f671cb5bd125a3a843dd8-us21";
 const LIST_ID = "e43ade486f";
 const DC = "us21";  //characters after the hyphen in API key
 
@@ -11,6 +11,7 @@ const request = require("request");
 // Create an instance of the Express application
 let app = express();
 
+app.set("view engine", "ejs");
 // Middleware setup
 // ----------------
 // Parse incoming request bodies in a middleware before your handlers
@@ -23,10 +24,10 @@ app.use(express.static("public"));
 
 // Routes and Request Handling
 // ---------------------------
-
+let message = "Signup Page";
 // When a user accesses the root URL, the signup.html file will be served
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/views/signup.html");
+  res.render("form", {messageText:message});
 });
 
 // Handle the form submission(POST request) from user
@@ -66,19 +67,22 @@ app.post("/", function(req, res) {
   request(options, function(error, response, body) {
     if(response.statusCode === 200) {
       // If the request is successful, send the success.html file
-      res.sendFile(__dirname + "/views/success.html");
+      message = "Awesome! You are subscribed!";
     }
     else {
       // If the request fails, log the status code and send the failure.html
       console.log(response.statusCode);
-      res.sendFile(__dirname + "/views/failure.html");
+      message = "Failure! Please try again!";
     }
+    res.render("form", {messageText : message});
+    // res.redirect("/");
   });
 
 });
 
 // Redirect to the root URL after pressing the button on failure.html page
 app.get("/failure", function(req, res) {
+  message = "Signup Page";
   res.redirect("/");
 });
 
