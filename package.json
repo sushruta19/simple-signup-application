@@ -1,0 +1,33 @@
+{
+  "name": "simple-signup-application",
+  "version": "1.0.0",
+  "description": "Simple signup application that collects user data and sends it to Mailchimp servers via the Mailchimp API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushruta19/simple-signup-application.git"
+  },
+  "keywords": [
+    "\"Signup\"",
+    "\"Node.js\"",
+    "\"Beginner",
+    "Project\"",
+    "\"API",
+    "Request\""
+  ],
+  "author": "Soubhik Sen <sensoubhik2001@gmail.com> (Github: sushruta19)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sushruta19/simple-signup-application/issues"
+  },
+  "homepage": "https://github.com/sushruta19/simple-signup-application#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  }
+}
