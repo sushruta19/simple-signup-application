@@ -18,11 +18,11 @@ The application follows a directory structure that organizes the files as follow
 - First make sure that you have node and git installed in your system.
 - Clone the repository to your local machine
 ```bash
-git clone https://github.com/sushruta19/newsletter-signup.git
+git clone https://github.com/sushruta19/simple-signup-application.git
 ```
-- Navigate to the `newsletter-signup` directory
+- Navigate to the `simple-signup-application` directory
 ```bash
-cd newsletter-signup
+cd simple-signup-application
 ```
 - Install the required dependencies by running the following command:
 ```bash
@@ -34,7 +34,7 @@ npm start
 ```
 - This will start our application. Our server is running at `localhost:3000`.
 - Open a web browser and visit http://localhost:3000 to access the Signup-Page application.
-- You will see the signup.html file being rendered.
+- You will see the `signup.html` file being rendered.
 
 ### How to find out the data you collected?
 - Please open a free mailchimp account and get the API keys and list ID(or Audience ID).
@@ -45,7 +45,7 @@ npm start
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or improvements for the Signup-Application, please do the following steps : 
-- **Fork** the repository. <br>![Imgur](https://i.imgur.com/an7hXVR.png)
+- **Fork** the repository. <br>![Fork Icon](https://i.imgur.com/an7hXVR.png)
 - **Clone** the repository: Clone the forked repository to your local machine using the following command:
 ```bash
 git clone <forked-repo-url>
