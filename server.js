@@ -1,12 +1,10 @@
 // Importing the configuration file
 const config = require("./config.json");
 
-// Retrieving the API key from the configuration
+// Retrieving the API key, list ID and DC from the configuration
 const MAILCHIMP_API_KEY = config.apiKey;
-
-// Replace these values with your own List ID, and DC.
-const LIST_ID = "e43ade486f";
-const DC = "us21";  //characters after the hyphen in API key
+const LIST_ID = config.listID;
+const DC = config.dc;  //characters after the hyphen in API key
 
 // Import the required dependencies
 const express = require("express");
@@ -32,6 +30,7 @@ app.use(express.static("public"));
 let message = "Signup Page";
 // When a user accesses the root URL, the signup.html file will be served
 app.get("/", function(req, res) {
+  console.log(MAILCHIMP_API_KEY, LIST_ID, DC);
   res.render("form", {messageText:message});
 });
 
@@ -63,7 +62,7 @@ app.post("/", function(req, res) {
     url: `https://${DC}.api.mailchimp.com/3.0/lists/${LIST_ID}`,
     method : "POST",
     headers : {
-      Authorization: `kd ${MAILCHIMP_API_KEY}`
+      Authorization: `jj ${MAILCHIMP_API_KEY}`
     },
     body : jsonData
   }
