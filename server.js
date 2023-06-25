@@ -1,7 +1,10 @@
-// Replace these values with your own API key, List ID, and DC.
-const MAILCHIMP_API_KEY = "7a11f318b2f22e09fd3a414df8560b2c-us21";
-const LIST_ID = "e43ade486f";
-const DC = "us21";  //characters after the hyphen in API key
+// Importing the configuration file
+const config = require("./config.json");
+
+// Retrieving the API key, list ID and DC from the configuration
+const MAILCHIMP_API_KEY = config.apiKey;
+const LIST_ID = config.listID;
+const DC = config.dc;  //characters after the hyphen in API key
 
 // Import the required dependencies
 const express = require("express");
@@ -57,7 +60,7 @@ app.post("/", function(req, res) {
     url: `https://${DC}.api.mailchimp.com/3.0/lists/${LIST_ID}`,
     method : "POST",
     headers : {
-      Authorization: `jj ${MAILCHIMP_API_KEY}`
+      Authorization: `anystring ${MAILCHIMP_API_KEY}`
     },
     body : jsonData
   }
@@ -70,7 +73,7 @@ app.post("/", function(req, res) {
     }
     else {
       // If the request fails, log the status code and send the failure.html
-      console.log(response.statusCode);
+      console.log(response.statusCode, error);
       res.sendFile(__dirname + "/views/failure.html");
     }
   });

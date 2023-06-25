@@ -15,7 +15,8 @@ The application follows a directory structure that organizes the files as follow
 
 
 ## How to run the project in your local system?
-- First make sure that you have node and git installed in your system.
+- Please open a free mailchimp account and get the API keys and list ID(or Audience ID).
+- Make sure that you have node and git installed in your system.
 - Clone the repository to your local machine
 ```bash
 git clone https://github.com/sushruta19/simple-signup-application.git
@@ -24,6 +25,16 @@ git clone https://github.com/sushruta19/simple-signup-application.git
 ```bash
 cd simple-signup-application
 ```
+- Create a config.json file and enter your API key, list id and dc there.
+```json
+{
+    "apiKey" : "YOUR_MAILCHIMP_API_KEY",
+    "listID" : "AUDIENCE_ID",
+    "dc" : "characters after hyphen(-) in your API Key"
+}
+```
+<p style="color:red"><b>IMPORTANT</b> : Do not add API Key directly to your server.js file because in case you push your project to a public repo, the API Key will be revoked immediately due to public exposure! <br>The config.json file has been added in .gitignore to avoid getting pushed to public repository.</p>
+
 - Install the required dependencies by running the following command:
 ```bash
 npm install
@@ -36,9 +47,6 @@ npm start
 - Open a web browser and visit http://localhost:3000 to access the Signup-Page application.
 - You will see the `signup.html` file being rendered.
 
-### How to find out the data you collected?
-- Please open a free mailchimp account and get the API keys and list ID(or Audience ID).
-- Open the server.js file and replace the `MAILCHIMP_API_KEY`, `LIST_ID` and `DC` with yours (_`DC` is the characters after the hyphen`-` in your API Key_).
 - Save the changes and start the application.
 - Fill the signup form. You shall see the details in your audience list in your mailchimp account.
 
@@ -73,5 +81,6 @@ git push origin <new-branch-you-worked-on>
 Please make sure to follow these guidelines to ensure a smooth and collaborative contribution process. If you have any questions or need further assistance, feel free to reach out to us.
 
 Thank you for your contribution!
+
 ## License
 This project is licensed under the [MIT License](LICENSE)
