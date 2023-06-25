@@ -27,10 +27,13 @@ app.use(express.static("public"));
 
 // Routes and Request Handling
 // ---------------------------
+
+//Global variable
 let message = "Signup Page";
-// When a user accesses the root URL, the signup.html file will be served
+
+// When a user accesses the root URL, form will be rendered 
 app.get("/", function(req, res) {
-  console.log(MAILCHIMP_API_KEY, LIST_ID, DC);
+  // message = "Signup Page"
   res.render("form", {messageText:message});
 });
 
@@ -70,16 +73,15 @@ app.post("/", function(req, res) {
   // Send the HTTP request to Mailchimp
   request(options, function(error, response, body) {
     if(response.statusCode === 200) {
-      // If the request is successful, send the success.html file
+      // If the request is successful
       message = "Awesome! You are subscribed!";
     }
     else {
-      // If the request fails, log the status code and send the failure.html
+      // If the request fails
       console.log(response.statusCode);
       message = "Failure! Please try again!";
     }
     res.render("form", {messageText : message});
-    // res.redirect("/");
   });
 
 });

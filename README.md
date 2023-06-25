@@ -47,8 +47,6 @@ npm start
 - Open a web browser and visit http://localhost:3000 to access the Signup-Page application.
 - You will see the `signup.html` file being rendered.
 
-- Save the changes and start the application.
-- Fill the signup form. You shall see the details in your audience list in your mailchimp account.
 
 ## Contributing
 
